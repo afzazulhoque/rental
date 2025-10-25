@@ -1,7 +1,7 @@
-console.log("Fetching login partial from:", loginPartialPath);
 (function () {
   const modalContainerId = 'loginModal';
-  const loginPartialPath = './login.html'; // go up one folder from /js/
+  const loginPartialPath = './login.html'; // correct path for GitHub Pages
+  console.log("Fetching login partial from:", loginPartialPath); // ✅ moved here
 
   function domReady(fn) {
     if (document.readyState === 'loading') {
@@ -48,5 +48,3 @@ console.log("Fetching login partial from:", loginPartialPath);
       .catch(err => console.error('Error loading login partial:', err));
   });
 })();
-
-
