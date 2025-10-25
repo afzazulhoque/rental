@@ -1,0 +1,108 @@
+/* ===== LOGIN POPUP ===== */
+.login-overlay {
+  display: none; /* Hidden initially */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.login-popup {
+  background: #111;
+  color: #fff;
+  padding: 35px 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 25px rgba(220, 20, 60, 0.4);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.login-popup h2 {
+  color: crimson;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.login-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ddd;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.login-form input:focus {
+  border-color: crimson;
+  outline: none;
+}
+
+.login-submit {
+  width: 100%;
+  background: crimson;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-submit:hover {
+  background: #e40046;
+}
+
+/* TEXT BELOW */
+.login-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.login-note a {
+  color: crimson;
+  text-decoration: none;
+}
+
+.login-note a:hover {
+  text-decoration: underline;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.8rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: crimson;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link id="browser_favicon" rel="shortcut icon" href="img/logo.png">
+  <title>Rental - Find Your Space</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/login.css"> <!-- path to login modal CSS -->
+  <link rel="stylesheet" href="css/register.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- ====== HEADER ====== -->
+  <header>
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar">
+      <div class="nav-logo"><a href="#">Rental</a></div>
+
+      <!-- Menu Toggle Button for mobile -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <!-- <li><a href="#">Home</a></li> -->
+
+        <li>
+          <a href="#">House</a>
+          <ul class="submenu">
+            <li><a href="#">Family</a></li>
+            <li><a href="#">Sub-let</a></li>
+            <li><a href="#">Bachelor - Male</a></li>
+            <li><a href="#">Bachelor - Female</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Hostel</a>
+          <ul class="submenu">
+            <li><a href="#">Ladies Hostel</a></li>
+            <li><a href="#">Boys Hostel</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Office</a>
+          <ul class="submenu">
+            <li><a href="#">Bank</a></li>
+            <li><a href="#">Corporate</a></li>
+            <li><a href="#">Factory</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Shop</a>
+          <ul class="submenu">
+            <li><a href="#">Showroom</a></li>
+            <li><a href="#">Small Shop</a></li>
+            <li><a href="#">Restaurant / Cafe</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Garage</a>
+          <ul class="submenu">
+            <li><a href="#">Bike Parking</a></li>
+            <li><a href="#">Car Parking</a></li>
+            <li><a href="#">Others</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#vehicle">Vehicle</a>
+          <ul class="submenu">
+            <li><a href="#">Bike</a></li>
+            <li><a href="#">Car</a></li>
+            <li><a href="#">Bus</a></li>
+            <li><a href="#">Truck / Cargo</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#advertisement">Advertisement</a>
+          <ul class="submenu">
+            <li><a href="#">Billboard</a></li>
+            <li><a href="#">Digital Screen</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#service">Services</a>
+        </li>
+      </ul>
+      <div class="login-btn">
+        <a href="#" id="loginBtn">Login</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ====== HERO / COVER SECTION ====== -->
+  <section class="hero">
+    <div class="overlay">
+      <h2>Find Your Perfect Space</h2>
+      <p>Search houses, offices, garages and more — all in one place.</p>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search by area" />
+        <input type="number" placeholder="Min price" />
+        <input type="number" placeholder="Max price" />
+        <select>
+          <option value="" disabled selected hidden>Select Category</option>
+          <option value="house">House</option>
+          <option value="hostel">Hostel</option>
+          <option value="office">Office</option>
+          <option value="shop">Shop</option>
+          <option value="garage">Garage</option>
+          <option value="vehicle">Vehicle</option>
+          <option value="advertisement">Advertisement</option>
+        </select>
+        <button>Search</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== FEATURED SECTION ====== -->
+  <section class="featured">
+    <h2>⭐ Featured Posts</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="img/family.jpg" alt="House" />
+        <div class="card-content">
+          <h3>Family Apartment - Dhanmondi</h3>
+          <p>💰 25,000 BDT/mo</p>
+          <p>📍 Dhanmondi, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>🛏 2 Bed | 🛁 3 Bath</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/garage.webp" alt="Garage" />
+        <div class="card-content">
+          <h3>Garage for Car - Mirpur</h3>
+          <p>💰 5,000 BDT/mo</p>
+          <p>📍 Mirpur, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>📐 200 sq ft</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/hostel.jpg" alt="Hostel" />
+        <div class="card-content">
+          <h3>Hostel Room - Ladies</h3>
+          <p>💰 7,000 BDT/mo</p>
+          <p>📍 Uttara, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>🛏 2 & 4 Bed / Room</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ALL LISTINGS SECTION ====== -->
+  <section class="all-listings">
+    <h2>🏠 All Properties</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="img/bachelor.webp" alt="Listing" />
+        <div class="card-content">
+          <h3>Bachelor Room - Banani</h3>
+          <p>💰 10,000 BDT/mo</p>
+          <p>📍 Banani, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>🛏 2 Seat</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/office.jpeg" alt="Listing" />
+        <div class="card-content">
+          <h3>Office Space - Gulshan</h3>
+          <p>💰 50,000 BDT/mo</p>
+          <p>📍 Gulshan, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>📐 3200 sq ft</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/restaurant.jpg" alt="Listing" />
+        <div class="card-content">
+          <h3>Restaurant Space - Uttara</h3>
+          <p>💰 30,000 BDT/mo</p>
+          <p>📍 Uttara, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>📐 1800 sq ft</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="card">
+        <img src="img/sublet.jpg" alt="Listing" />
+        <div class="card-content">
+          <h3>Sublet Room - Mohammadpur</h3>
+          <p>💰 8,000 BDT/mo</p>
+          <p>📍 Mohammadpur, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>🛏 1 Room | 🛁 1 Bath | Shared Kitchen</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="card">
+        <img src="img/showroom.webp" alt="Listing" />
+        <div class="card-content">
+          <h3>Showroom - New Market</h3>
+          <p>💰 40,000 BDT/mo</p>
+          <p>📍 New Market, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>📐 2000 sq ft</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/bank.jpeg" alt="Listing" />
+        <div class="card-content">
+          <h3>Bank - Motijheel</h3>
+          <p>💰 60,000 BDT/mo</p>
+          <p>📍 Motijheel, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>📐 3200 sq ft</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== VEHICLE RENT SECTION ====== -->
+  <section class="vehicle-rent" id="vehicle">
+    <h2>🚗 Vehicle Rent</h2>
+    <div class="card-container">
+
+      <div class="card">
+        <img src="img/car.jpeg" alt="Car for rent" />
+        <div class="card-content">
+          <h3>Private Car - Daily Rent</h3>
+          <p>💰 3,000 BDT/day</p>
+          <p>📍 Dhanmondi, Dhaka</p>
+          <p>📅 Available from: 20 Oct 2025</p>
+          <p>⛽ Diesel | Driver Included</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/bike.jpg" alt="Bike for rent" />
+        <div class="card-content">
+          <h3>Bike - Hourly Rent</h3>
+          <p>💰 150 BDT/hr</p>
+          <p>📍 Mirpur, Dhaka</p>
+          <p>📅 Available from: 21 Oct 2025</p>
+          <p>🏍 Helmet Provided</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/truck.jpg" alt="Truck for rent" />
+        <div class="card-content">
+          <h3>Mini Truck - Hourly Rent</h3>
+          <p>💰 1,000 BDT/hr</p>
+          <p>📍 Uttara, Dhaka</p>
+          <p>📅 Available from: 25 Oct 2025</p>
+          <p>🚚 2 Ton Capacity</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/bus2.jpg" alt="Microbus for rent" />
+        <div class="card-content">
+          <h3>Bus - 1:2 Seat</h3>
+          <p>💰 15,000 BDT/day</p>
+          <p>📍 Gulshan, Dhaka</p>
+          <p>📅 Available from: 19 Oct 2025</p>
+          <p>🚐 30 Seats | AC</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== ADVERTISEMENT SECTION ====== -->
+  <section class="advertisement" id="advertisement">
+    <h2>📢 Advertisement Spaces</h2>
+    <div class="card-container">
+
+      <div class="card">
+        <img src="img/billboard_shopping.jpg" alt="Digital Screen Rent" />
+        <div class="card-content">
+          <h3>LED Screen - Shopping Mall</h3>
+          <p>💰 50,000 BDT/month</p>
+          <p>📍 Bashundhara City, Dhaka</p>
+          <p>📅 Available from: 22 Oct 2025</p>
+          <p>💡 Full HD | High Visibility</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/billboard_4.jpg" alt="Shop Display Rent" />
+        <div class="card-content">
+          <h3>Roadside Billboard - Dhanmondi</h3>
+          <p>💰 15,000 BDT/month</p>
+          <p>📍 New Market, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>🪧 Digital LED | Moderate Footfall</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/billboard_smart.jpg" alt="Digital Billboard Rent" />
+        <div class="card-content">
+          <h3>Digital Billboard - Airport Road</h3>
+          <p>💰 80,000 BDT/month</p>
+          <p>📍 Airport Road, Dhaka</p>
+          <p>📅 Available from: 18 Oct 2025</p>
+          <p>💡 Dynamic LED | High Traffic Zone</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/billboard_shopping.jpg" alt="Digital Screen Rent" />
+        <div class="card-content">
+          <h3>LED Screen - Shopping Mall</h3>
+          <p>💰 50,000 BDT/month</p>
+          <p>📍 Bashundhara City, Dhaka</p>
+          <p>📅 Available from: 22 Oct 2025</p>
+          <p>💡 Full HD | High Visibility</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/billboard_4.jpg" alt="Shop Display Rent" />
+        <div class="card-content">
+          <h3>Roadside Billboard - Dhanmondi</h3>
+          <p>💰 15,000 BDT/month</p>
+          <p>📍 New Market, Dhaka</p>
+          <p>📅 Available from: 1 Nov 2025</p>
+          <p>🪧 Digital LED | Moderate Footfall</p>
+          <div class="actions">
+            <button>View</button>
+            <button>🤍 Save</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <!-- ====== SERVICES SECTION ====== -->
+  <section class="services-section" id="service">
+    <h2>Other Services</h2>
+    <p class="services-subtitle">Find trusted local services to make your stay easier.</p>
+
+    <div class="services-grid">
+      <!-- Transportation -->
+      <div class="service-card" data-modal="transportModal">
+        <div class="service-icon">🚚</div>
+        <h3>Transportation</h3>
+        <p>Need help shifting or moving? Hire pickup trucks or movers easily.</p>
+        <a href="#" class="service-btn open-modal-btn">View Providers</a>
+      </div>
+
+      <!-- Maid / Caregiver -->
+      <div class="service-card" data-modal="maidModal">
+        <div class="service-icon">👩‍🍳</div>
+        <h3>Maid / Caregiver</h3>
+        <p>Find reliable cooks, housemaids, and caregivers near your area.</p>
+        <a href="#" class="service-btn open-modal-btn">View Providers</a>
+      </div>
+
+      <!-- Painting -->
+
+      <!-- <div class="service-card" data-modal="paintModal">
+        <div class="service-icon">🎨</div>
+        <h3>Painting Service</h3>
+        <p>Professional painters to refresh your home or office look.</p>
+        <a href="#" class="service-btn open-modal-btn">View Providers</a>
+      </div> -->
+
+      <!-- Maintenance -->
+      <div class="service-card" data-modal="maintModal">
+        <div class="service-icon">🛠️</div>
+        <h3>Home Maintenance</h3>
+        <p>Electricians, Plumbers, Cleaning, Painting and more home maintainence.</p>
+        <a href="#" class="service-btn open-modal-btn">View Providers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Sevices/ COMBINED MODAL ======= -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="providerList" class="provider-list"></div>
+    </div>
+  </div>
+
+  <!-- ====== FOOTER SECTION ====== -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <span class="footer-divider"></span>
+
+      <div class="footer-social">
+        <span>Follow Us:</span>
+        <div class="social-icons">
+          <a href="#" class="social facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social twitter" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Rental. All rights reserved.</p>
+  </footer>
+
+  <!-- Menu toggle -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <!-- Service Pop-up -->
+  <script>
+    const services = {
+      transportModal: {
+        title: "Transportation Providers",
+        providers: [
+          { name: "🚚 Truck Lagbe", website: "https://trucklagbe.com/" },
+          { name: "🤝 Sheba XYZ", website: "https://www.sheba.xyz/truck-rental" },
+          { name: "🦅 Lalamove", website: "https://www.lalamove.com/en-bd/" },
+          { name: "📦 Porter", website: "https://porter.com.bd/" },
+          { name: "🏠 Pack & Shift", website: "https://www.packnshift.com/" },
+          { name: "🚛 Pack N Move", website: "https://packnmove.com.bd/" },
+        ]
+      },
+      maidModal: {
+        title: "Maid / Caregiver Services",
+        providers: [
+          { name: "🤝 Sheba XYZ", website: "https://www.sheba.xyz/housemaid" },
+          { name: "🧼 Hellotask", website: "https://www.hellotask.app/" },
+          { name: "👵 Shohokari", website: "https://shohokari.com/" },
+          { name: "🤱 Bangladesh Maid Agency", website: "https://bdmaidagency.com/" },
+          { name: "👩‍🍳 Maisha Care", website: "https://maishacare.com/home-maid-service/" },
+          { name: "🏙️ City Maid Agency", website: "https://citymaidagency.com/" }
+        ]
+      },
+      // paintModal: {
+      //   title: "Painting Services",
+      //   providers: [
+      //     { name: "🎨 ColorPro Painters", website: "#" },
+      //     { name: "🖌️ FreshCoat Decor", website: "#" },
+      //     { name: "🏠 PerfectFinish Paint", website: "#" }
+      //   ]
+      // },
+      maintModal: {
+        title: "Home Maintenance Providers",
+        providers: [
+          { name: "🔧 Sheba XYZ", website: "https://www.sheba.xyz/" },
+          { name: "👵 Shohokari", website: "https://shohokari.com/" },
+          { name: "🧰 HandyMama", website: "https://handymama.co/" },
+          { name: "🖌️ Poshra", website: "https://www.poshorabd.com/" }
+        ]
+      }
+    };
+
+    const modal = document.getElementById("serviceModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const providerList = document.getElementById("providerList");
+    const closeBtn = document.querySelector(".close-btn");
+
+    document.querySelectorAll(".open-modal-btn").forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        const modalKey = e.target.closest(".service-card").dataset.modal;
+        const selectedService = services[modalKey];
+
+        modalTitle.textContent = selectedService.title;
+        providerList.innerHTML = selectedService.providers
+          .map(p => `
+          <div class="provider-item">
+            <p>${p.name}</p>
+            <a href="${p.website}" class="visit-btn" target="_blank">Visit Website</a>
+          </div>
+        `)
+          .join("");
+
+        modal.style.display = "block";
+      });
+    });
+
+    closeBtn.onclick = () => (modal.style.display = "none");
+    window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+  </script>
+
+  <!-- LOGIN/Sign-Up MODAL -->
+  <div id="loginModal"></div>
+  <div id="registerModal"></div>
+
+  <script src="js/login.js"></script>
+  <script src="js/register.js"></script>
+
+</body>
+
+</html>
