@@ -1,6 +1,6 @@
 (function () {
   const modalContainerId = 'loginModal';
-  const loginPartialPath = '/login.html'; // go up one folder from /js/
+  const loginPartialPath = './login.html'; // go up one folder from /js/
 
   function domReady(fn) {
     if (document.readyState === 'loading') {
@@ -47,3 +47,4 @@
       .catch(err => console.error('Error loading login partial:', err));
   });
 })();
+
