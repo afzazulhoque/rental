@@ -1,3 +1,4 @@
+console.log("Fetching login partial from:", loginPartialPath);
 (function () {
   const modalContainerId = 'loginModal';
   const loginPartialPath = './login.html'; // go up one folder from /js/
@@ -47,4 +48,5 @@
       .catch(err => console.error('Error loading login partial:', err));
   });
 })();
+
 
