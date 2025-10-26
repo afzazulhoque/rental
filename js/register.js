@@ -1,7 +1,6 @@
 (function () {
   const modalContainerId = 'registerModal';
   const registerPartialPath = './register.html';
-  console.log("Fetching register partial from:", registerPartialPath);
 
   function domReady(fn) {
     if (document.readyState === 'loading') {
@@ -72,6 +71,7 @@
 
           let valid = true;
 
+          // Helper: show error
           const showError = (input, msg) => {
             const span = document.createElement('span');
             span.className = 'error-msg';
@@ -82,20 +82,44 @@
             input.insertAdjacentElement('afterend', span);
           };
 
+          // Check full name
           if (name.value.trim() === '') {
             showError(name, 'Full name is required.');
             valid = false;
           }
 
+          // Check email format
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRegex.test(email.value.trim())) {
             showError(email, 'Enter a valid email address.');
             valid = false;
           }
 
+          // Check passwords
           if (pass.value.length < 6) {
             showError(pass, 'Password must be at least 6 characters.');
             valid = false;
           }
 
-          if (pass.value !== confirm.valu
+          if (pass.value !== confirm.value) {
+            showError(confirm, 'Passwords do not match.');
+            valid = false;
+          }
+
+          // Check user type
+          if (!userType.value) {
+            showError(userType, 'Please select your user type.');
+            valid = false;
+          }
+
+          if (!valid) return;
+
+          // If all good:
+          alert('Registration successful!');
+          form.reset();
+          overlay.style.display = 'none';
+        });
+      })
+      .catch(err => console.error('Error loading register partial:', err));
+  });
+})();
